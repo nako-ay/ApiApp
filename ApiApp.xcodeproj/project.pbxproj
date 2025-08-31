@@ -6,7 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		21CA9D45B3BC83EBA9466A40 /* Pods_ApiApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9668F9E3DEB2AEF5CCAAFF15 /* Pods_ApiApp.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		9668F9E3DEB2AEF5CCAAFF15 /* Pods_ApiApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApiApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3C1B95EF099C85B9ECE3FB0 /* Pods-ApiApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiApp.release.xcconfig"; path = "Target Support Files/Pods-ApiApp/Pods-ApiApp.release.xcconfig"; sourceTree = "<group>"; };
+		C2FE55E7B9996BA1BE986E08 /* Pods-ApiApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiApp.debug.xcconfig"; path = "Target Support Files/Pods-ApiApp/Pods-ApiApp.debug.xcconfig"; sourceTree = "<group>"; };
 		FB10B7CD2E64A65D00957419 /* ApiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -36,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21CA9D45B3BC83EBA9466A40 /* Pods_ApiApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2282661AE808E891E03A7BA9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2FE55E7B9996BA1BE986E08 /* Pods-ApiApp.debug.xcconfig */,
+				B3C1B95EF099C85B9ECE3FB0 /* Pods-ApiApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		29BC5920E4CE210C68CBA846 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9668F9E3DEB2AEF5CCAAFF15 /* Pods_ApiApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FB10B7C42E64A65D00957419 = {
 			isa = PBXGroup;
 			children = (
 				FB10B7CF2E64A65D00957419 /* ApiApp */,
 				FB10B7CE2E64A65D00957419 /* Products */,
+				2282661AE808E891E03A7BA9 /* Pods */,
+				29BC5920E4CE210C68CBA846 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,9 +93,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB10B7E02E64A65D00957419 /* Build configuration list for PBXNativeTarget "ApiApp" */;
 			buildPhases = (
+				01DCAF0EFF99BFE4ED3ADC29 /* [CP] Check Pods Manifest.lock */,
 				FB10B7C92E64A65D00957419 /* Sources */,
 				FB10B7CA2E64A65D00957419 /* Frameworks */,
 				FB10B7CB2E64A65D00957419 /* Resources */,
+				64D30FAFCCF8C3B38F3DC03D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +107,6 @@
 				FB10B7CF2E64A65D00957419 /* ApiApp */,
 			);
 			name = ApiApp;
-			packageProductDependencies = (
-			);
 			productName = ApiApp;
 			productReference = FB10B7CD2E64A65D00957419 /* ApiApp.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +155,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01DCAF0EFF99BFE4ED3ADC29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ApiApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64D30FAFCCF8C3B38F3DC03D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApiApp/Pods-ApiApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApiApp/Pods-ApiApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ApiApp/Pods-ApiApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FB10B7C92E64A65D00957419 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +210,7 @@
 /* Begin XCBuildConfiguration section */
 		FB10B7E12E64A65D00957419 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2FE55E7B9996BA1BE986E08 /* Pods-ApiApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -150,8 +221,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -159,14 +230,19 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.mitsuhiko.hashiguchi.ApiApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		FB10B7E22E64A65D00957419 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3C1B95EF099C85B9ECE3FB0 /* Pods-ApiApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -177,8 +253,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -186,9 +262,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.mitsuhiko.hashiguchi.ApiApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
