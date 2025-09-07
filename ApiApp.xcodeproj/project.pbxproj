@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21CA9D45B3BC83EBA9466A40 /* Pods_ApiApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9668F9E3DEB2AEF5CCAAFF15 /* Pods_ApiApp.framework */; };
+		E41A2EC5EC48DAB83A6E06C9 /* Pods_ApiApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABDD14A7686EC887E3CF662 /* Pods_ApiApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9668F9E3DEB2AEF5CCAAFF15 /* Pods_ApiApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApiApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3C1B95EF099C85B9ECE3FB0 /* Pods-ApiApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiApp.release.xcconfig"; path = "Target Support Files/Pods-ApiApp/Pods-ApiApp.release.xcconfig"; sourceTree = "<group>"; };
-		C2FE55E7B9996BA1BE986E08 /* Pods-ApiApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiApp.debug.xcconfig"; path = "Target Support Files/Pods-ApiApp/Pods-ApiApp.debug.xcconfig"; sourceTree = "<group>"; };
+		818BE4F293483536443D2D29 /* Pods-ApiApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiApp.release.xcconfig"; path = "Target Support Files/Pods-ApiApp/Pods-ApiApp.release.xcconfig"; sourceTree = "<group>"; };
+		CB395FA74D5717056202D307 /* Pods-ApiApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiApp.debug.xcconfig"; path = "Target Support Files/Pods-ApiApp/Pods-ApiApp.debug.xcconfig"; sourceTree = "<group>"; };
+		DABDD14A7686EC887E3CF662 /* Pods_ApiApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApiApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB10B7CD2E64A65D00957419 /* ApiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -43,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21CA9D45B3BC83EBA9466A40 /* Pods_ApiApp.framework in Frameworks */,
+				E41A2EC5EC48DAB83A6E06C9 /* Pods_ApiApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,17 +53,16 @@
 		2282661AE808E891E03A7BA9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C2FE55E7B9996BA1BE986E08 /* Pods-ApiApp.debug.xcconfig */,
-				B3C1B95EF099C85B9ECE3FB0 /* Pods-ApiApp.release.xcconfig */,
+				CB395FA74D5717056202D307 /* Pods-ApiApp.debug.xcconfig */,
+				818BE4F293483536443D2D29 /* Pods-ApiApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		29BC5920E4CE210C68CBA846 /* Frameworks */ = {
+		8BBD16E67FA21AB1A91FD076 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9668F9E3DEB2AEF5CCAAFF15 /* Pods_ApiApp.framework */,
+				DABDD14A7686EC887E3CF662 /* Pods_ApiApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -74,7 +73,7 @@
 				FB10B7CF2E64A65D00957419 /* ApiApp */,
 				FB10B7CE2E64A65D00957419 /* Products */,
 				2282661AE808E891E03A7BA9 /* Pods */,
-				29BC5920E4CE210C68CBA846 /* Frameworks */,
+				8BBD16E67FA21AB1A91FD076 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,11 +92,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB10B7E02E64A65D00957419 /* Build configuration list for PBXNativeTarget "ApiApp" */;
 			buildPhases = (
-				01DCAF0EFF99BFE4ED3ADC29 /* [CP] Check Pods Manifest.lock */,
+				F46722984DC56D182A0C96E6 /* [CP] Check Pods Manifest.lock */,
 				FB10B7C92E64A65D00957419 /* Sources */,
 				FB10B7CA2E64A65D00957419 /* Frameworks */,
 				FB10B7CB2E64A65D00957419 /* Resources */,
-				64D30FAFCCF8C3B38F3DC03D /* [CP] Embed Pods Frameworks */,
+				03EE23BDAE1019328AEC31E3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,7 +155,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		01DCAF0EFF99BFE4ED3ADC29 /* [CP] Check Pods Manifest.lock */ = {
+		03EE23BDAE1019328AEC31E3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApiApp/Pods-ApiApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApiApp/Pods-ApiApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ApiApp/Pods-ApiApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F46722984DC56D182A0C96E6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -178,23 +194,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		64D30FAFCCF8C3B38F3DC03D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ApiApp/Pods-ApiApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ApiApp/Pods-ApiApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ApiApp/Pods-ApiApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -210,12 +209,13 @@
 /* Begin XCBuildConfiguration section */
 		FB10B7E12E64A65D00957419 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2FE55E7B9996BA1BE986E08 /* Pods-ApiApp.debug.xcconfig */;
+			baseConfigurationReference = CB395FA74D5717056202D307 /* Pods-ApiApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ApiApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -242,12 +242,13 @@
 		};
 		FB10B7E22E64A65D00957419 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3C1B95EF099C85B9ECE3FB0 /* Pods-ApiApp.release.xcconfig */;
+			baseConfigurationReference = 818BE4F293483536443D2D29 /* Pods-ApiApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ApiApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -307,9 +308,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -370,9 +372,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
