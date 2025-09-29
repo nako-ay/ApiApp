@@ -5,10 +5,11 @@ import AlamofireImage   // 追加
 import SafariServices
 
 
-class ApiViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ApiViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,UISearchBarDelegate {
     // UITableViewDelegate, UITableViewDataSource追加
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchText: UISearchBar!
     @IBOutlet weak var statusLabel: UILabel!
     
     var isLoading = false
@@ -25,6 +26,7 @@ class ApiViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         // ここから
         tableView.delegate = self
         tableView.dataSource = self
+        searchText.delegate = self
         
         // APIキー読み込み
         let filePath = Bundle.main.path(forResource: "ApiKey", ofType:"plist" )
@@ -51,8 +53,12 @@ class ApiViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     // ここまで追加
     
     
-    func updateShopArray(appendLoad: Bool = false) { // 引数追加
-        // ここから
+    func updateShopArray(appendLoad: Bool = false) {
+        // 検索キーワードの決定
+        let currentSearchText = searchText.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        // 検索バーのテキストが空の場合は、元のコードに合わせて「ランチ」をデフォルトとして使用
+        let keyword = currentSearchText.isEmpty ? "ランチ" : currentSearchText
+        
         // 現在読み込み中なら読み込みを開始しない
         if isLoading {
             return
@@ -76,7 +82,7 @@ class ApiViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             "key": apiKey,
             "start": startIndex,    // 開始位置の指定を変更
             "count": 20,
-            "keyword": "ランチ",
+            "keyword": keyword,
             "format": "json"
         ]
         print("APIリクエスト 開始位置: \(parameters["start"]!) 読み込み店舗数: \(parameters["count"]!)")    // 追加
@@ -189,5 +195,14 @@ class ApiViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         let safariViewController = SFSafariViewController(url: url)
         safariViewController.modalPresentationStyle = .pageSheet
         present(safariViewController, animated: true)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        // 現在の検索結果をクリア
+        self.shopArray = []
+        // テーブルビューをリロード
+        self.tableView.reloadData()
+        // 新しいキーワードで検索を実行
+        updateShopArray()
     }
 }

@@ -20,9 +20,17 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="406-o9-Ie2">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" text="" id="fzY-cd-TA1">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="1Y7-du-jTf" id="Vdr-aW-Qji"/>
+                                    </connections>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="kI3-wE-3mM" customClass="ShopCell" customModule="ApiApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="44.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="94" width="393" height="44.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kI3-wE-3mM" id="nfd-fY-RtU">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="44.333332061767578"/>
@@ -94,6 +102,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="searchText" destination="fzY-cd-TA1" id="36F-lP-W0J"/>
                         <outlet property="statusLabel" destination="rE1-Wz-Atw" id="N8i-wa-fgL"/>
                         <outlet property="tableView" destination="406-o9-Ie2" id="8O6-v2-09E"/>
                     </connections>
