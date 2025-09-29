@@ -56,6 +56,7 @@ class ApiViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     func updateShopArray(appendLoad: Bool = false) {
         // 検索キーワードの決定
         let currentSearchText = searchText.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        
         // 検索バーのテキストが空の場合は、元のコードに合わせて「ランチ」をデフォルトとして使用
         let keyword = currentSearchText.isEmpty ? "ランチ" : currentSearchText
         
@@ -133,17 +134,18 @@ class ApiViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         let url = URL(string: shop.logo_image)!
         cell.logoImageView.af.setImage(withURL: url)
         cell.shopNameLabel.text = shop.name
+        cell.shopAddressNameLabel.text = shop.address
         
-        // ここから
+
         let starImageName = shop.isFavorite ? "star.fill" : "star"
         let starImage = UIImage(systemName: starImageName)?.withRenderingMode(.alwaysOriginal)
         cell.favoriteButton.setImage(starImage, for: .normal)
-        // ここまで追加
+
 
         
         return cell
     }
-    // ここまで追加
+
     
     @IBAction func tapFavoriteButton(_ sender: UIButton) {
         // ここから
@@ -163,6 +165,7 @@ class ApiViewController: UIViewController, UITableViewDelegate, UITableViewDataS
                 let favoriteShop = FavoriteShop()
                 favoriteShop.id = shop.id
                 favoriteShop.name = shop.name
+                favoriteShop.address = shop.address
                 favoriteShop.logoImageURL = shop.logo_image
                 if shop.coupon_urls.sp == "" {
                     favoriteShop.couponURL = shop.coupon_urls.pc
@@ -173,7 +176,7 @@ class ApiViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             }
         }
         tableView.reloadData()
-        // ここまで追加
+
     }
     
     override func viewWillAppear(_ animated: Bool) {

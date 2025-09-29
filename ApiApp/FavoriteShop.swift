@@ -13,4 +13,6 @@ class FavoriteShop: Object {
     // クーポン画面URL
     @Persisted var couponURL = ""
     
+    @Persisted var address = ""
+    
 }

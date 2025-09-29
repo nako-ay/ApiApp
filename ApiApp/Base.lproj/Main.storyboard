@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -44,9 +45,15 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLT-3f-cpR">
-                                                    <rect key="frame" x="52" y="11.666666666666664" width="283" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="52" y="14.333333333333336" width="283" height="15.666666666666664"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEy-cS-kaZ" userLabel="Shop Address Label">
+                                                    <rect key="frame" x="54.000000000000007" y="27.333333333333329" width="26.333333333333336" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" name="AccentColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w98-RH-eXo">
@@ -73,11 +80,14 @@
                                                 <constraint firstAttribute="bottom" secondItem="mFI-bg-IVV" secondAttribute="bottom" id="DIF-ux-gMq"/>
                                                 <constraint firstItem="mFI-bg-IVV" firstAttribute="leading" secondItem="nfd-fY-RtU" secondAttribute="leading" id="YTx-3e-fF4"/>
                                                 <constraint firstItem="mFI-bg-IVV" firstAttribute="top" secondItem="nfd-fY-RtU" secondAttribute="top" id="cAi-c3-J41"/>
+                                                <constraint firstAttribute="bottom" secondItem="oEy-cS-kaZ" secondAttribute="bottom" constant="5" id="fd2-jF-Lu7"/>
+                                                <constraint firstItem="oEy-cS-kaZ" firstAttribute="leading" secondItem="mFI-bg-IVV" secondAttribute="trailing" constant="10" id="gXq-mo-8Ar"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="favoriteButton" destination="w98-RH-eXo" id="uGj-Sj-kQv"/>
                                             <outlet property="logoImageView" destination="mFI-bg-IVV" id="t2j-qS-kWO"/>
+                                            <outlet property="shopAddressNameLabel" destination="oEy-cS-kaZ" id="HCc-GY-R9U"/>
                                             <outlet property="shopNameLabel" destination="qLT-3f-cpR" id="KiI-V5-6Aq"/>
                                         </connections>
                                     </tableViewCell>
@@ -138,9 +148,15 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LS1-r6-vB0">
-                                                    <rect key="frame" x="52" y="11.666666666666664" width="283" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="52" y="14.333333333333336" width="283" height="15.666666666666664"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuV-Er-nFw" userLabel="Shop Address Label">
+                                                    <rect key="frame" x="54.000000000000007" y="27.333333333333329" width="26.333333333333336" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" name="AccentColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1b9-iC-9bl">
@@ -166,12 +182,15 @@
                                                 <constraint firstItem="gfb-PG-dHl" firstAttribute="leading" secondItem="eG0-4I-EOO" secondAttribute="leading" id="coZ-Vi-fsS"/>
                                                 <constraint firstItem="1b9-iC-9bl" firstAttribute="centerY" secondItem="eG0-4I-EOO" secondAttribute="centerY" id="mwf-Ai-hUe"/>
                                                 <constraint firstItem="LS1-r6-vB0" firstAttribute="leading" secondItem="gfb-PG-dHl" secondAttribute="trailing" constant="8" id="our-Si-3z5"/>
+                                                <constraint firstAttribute="bottom" secondItem="EuV-Er-nFw" secondAttribute="bottom" constant="5" id="urj-PD-hqO"/>
+                                                <constraint firstItem="EuV-Er-nFw" firstAttribute="leading" secondItem="gfb-PG-dHl" secondAttribute="trailing" constant="10" id="wfn-1n-Qw5"/>
                                                 <constraint firstAttribute="trailing" secondItem="1b9-iC-9bl" secondAttribute="trailing" constant="20" id="xCl-n6-oWU"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="favoriteButton" destination="1b9-iC-9bl" id="X0O-Cq-pCM"/>
                                             <outlet property="logoImageView" destination="gfb-PG-dHl" id="pd8-Hj-gl2"/>
+                                            <outlet property="shopAddressNameLabel" destination="EuV-Er-nFw" id="NbR-jw-Sh6"/>
                                             <outlet property="shopNameLabel" destination="LS1-r6-vB0" id="4cb-GE-I1q"/>
                                         </connections>
                                     </tableViewCell>
@@ -223,6 +242,9 @@
     <resources>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
